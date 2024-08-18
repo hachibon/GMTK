@@ -12,14 +12,19 @@ public class SceneSwitcher : MonoBehaviour
         //Archives.IsInteractable();
     }
 
-    public void GotoStart()
+    public void GotoLevel1()
     {
-        SceneManager.LoadScene("StartTongvaSteps");
+        SceneManager.LoadScene("Level1");
     }
 
-    public void GotoLevel()
+    public void GotoLevel2()
     {
-        SceneManager.LoadScene("Main Scene");
+        SceneManager.LoadScene("Level2");
+    }
+
+    public void GotoLevel3()
+    {
+        SceneManager.LoadScene("Level3");
     }
 
     public void GotoEnding()

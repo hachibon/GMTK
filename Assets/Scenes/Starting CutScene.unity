@@ -306,6 +306,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d22857327b98ab499e71f2ffee10065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  videoL: 10
+  controller: {fileID: 1827137746}
+  thisCutscene: initialCutscene
 --- !u!1 &762034534
 GameObject:
   m_ObjectHideFlags: 0
