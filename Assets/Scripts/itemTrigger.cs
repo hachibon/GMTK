@@ -11,10 +11,11 @@ public class ItemTrigger : MonoBehaviour
 {
         [SerializeField] private GameObject instructionUI;
         [SerializeField] private GameObject backgroundObject;
-        [SerializeField] private GameObject destination;
-        [SerializeField] private bool triggerActive = true;
+        //[SerializeField] private bool triggerActive = true;
+        [SerializeField] GameObject moveUI;
         Animator playerAnimator;
         [SerializeField] private CinemachineVirtualCamera diorama;
+        [SerializeField] private GameObject text;
         //[SerializeField] private TextMeshProUGUI lineContainer;
         //[SerializeField] private GameObject backgroundItem;
         //[SerializeField] private List<AudioClip> audioClips;
@@ -30,24 +31,24 @@ public class ItemTrigger : MonoBehaviour
         //bool firstTime = true;
         //PlayerMovement script;
         //bool buttonPress = false;
-        public GameObject thisItem;
+        //public GameObject thisItem;
 
 
-        void OnEnable()
+        void OnTriggerEnter(Collider other)
         {
-            playerAnimator = player.GetComponent<Animator>();
-            //script = player.GetComponent<PlayerMovement>();
-        }
- 
-        private void Update()
-        {
-            if (triggerActive)
+            if (other.CompareTag("Player"))
             {
+                playerAnimator = player.GetComponent<Animator>();
+                //script = player.GetComponent<PlayerMovement>();
                 //script.speed = 0;
                 playerAnimator.SetBool("playerIdle", false);
                 playerAnimator.SetBool("playerActivate", true);
                 StartCoroutine(waitForPlayerActivate());
             }
+        }
+ 
+        private void Update()
+        {
             
             /*
             if (triggerActive && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E)) && firstTime)
@@ -72,11 +73,12 @@ public class ItemTrigger : MonoBehaviour
         {
             yield return new WaitForSeconds(4f);
             //need to change after receive animation
+            text.SetActive(false);
             diorama.Priority = 4;
             yield return new WaitForSeconds(2f);
             instructionUI.SetActive(true);
             backgroundObject.SetActive(true);
-            destination.SetActive(true);
+            moveUI.SetActive(false);
         }
 
 /*

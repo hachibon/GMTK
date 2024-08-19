@@ -17,8 +17,11 @@ public class movingItem : MonoBehaviour
     private Boolean moveZ=false, moveY=false, rotateZ=false, rotateY=false, scale=false;
     private Boolean pressedOnce=false;
     [SerializeField] GameObject target;
-    [SerializeField] private CinemachineVirtualCamera diorama;
     [SerializeField] GameObject trigger;
+    [SerializeField] GameObject moveUI;
+    [SerializeField] private CinemachineVirtualCamera diorama;
+    [SerializeField] private GameObject text;
+    [SerializeField] private GameObject instructions;
     
     
     // Start is called before the first frame update
@@ -30,18 +33,18 @@ public class movingItem : MonoBehaviour
         ogYScale = transform.localScale.y;
         zScale = transform.localScale.z;
         ogZScale = transform.localScale.z;
-        xPosition = transform.position.x;
-        ogXPosition = transform.position.x;
-        yPosition = transform.position.y;
-        ogYPosition = transform.position.y;
-        zPosition = transform.position.z;
-        ogZPosition = transform.position.z;
-        xRotate = transform.eulerAngles.x;
-        ogXRotate = transform.eulerAngles.x;
-        yRotate = transform.eulerAngles.y;
-        ogYRotate = transform.eulerAngles.y;
-        zRotate = transform.eulerAngles.z;
-        ogZRotate = transform.eulerAngles.z;
+        xPosition = transform.localPosition.x;
+        ogXPosition = transform.localPosition.x;
+        yPosition = transform.localPosition.y;
+        ogYPosition = transform.localPosition.y;
+        zPosition = transform.localPosition.z;
+        ogZPosition = transform.localPosition.z;
+        xRotate = transform.localEulerAngles.x;
+        ogXRotate = transform.localEulerAngles.x;
+        yRotate = transform.localEulerAngles.y;
+        ogYRotate = transform.localEulerAngles.y;
+        zRotate = transform.localEulerAngles.z;
+        ogZRotate = transform.localEulerAngles.z;
     }
 
     // Update is called once per frame
@@ -135,12 +138,12 @@ public class movingItem : MonoBehaviour
             if (Input.GetAxis("Mouse ScrollWheel") > 0f ) // forward
             {
                 zPosition = zPosition+changedSizeMove;
-                transform.position = new Vector3(xPosition,yPosition,zPosition);
+                transform.localPosition = new Vector3(xPosition,yPosition,zPosition);
             }
             else if (Input.GetAxis("Mouse ScrollWheel") < 0f ) // backwards
             {
                 zPosition = zPosition-changedSizeMove;
-                transform.position = new Vector3(xPosition,yPosition,zPosition);
+                transform.localPosition = new Vector3(xPosition,yPosition,zPosition);
             }
         }
         if(moveY)
@@ -149,12 +152,12 @@ public class movingItem : MonoBehaviour
             if (Input.GetAxis("Mouse ScrollWheel") > 0f ) // forward
             {
                 yPosition = yPosition+changedSizeMove;
-                transform.position = new Vector3(xPosition,yPosition,zPosition);
+                transform.localPosition = new Vector3(xPosition,yPosition,zPosition);
             }
             else if (Input.GetAxis("Mouse ScrollWheel") < 0f ) // backwards
             {
                 yPosition = yPosition-changedSizeMove;
-                transform.position = new Vector3(xPosition,yPosition,zPosition);
+                transform.localPosition = new Vector3(xPosition,yPosition,zPosition);
             }
         }
         if(rotateZ)
@@ -162,12 +165,12 @@ public class movingItem : MonoBehaviour
             if (Input.GetAxis("Mouse ScrollWheel") > 0f ) // forward
             {
                 zRotate = zRotate+changedSizeRotate;
-                transform.eulerAngles = new Vector3(xRotate, yRotate, zRotate);
+                transform.localEulerAngles = new Vector3(xRotate, yRotate, zRotate);
             }
             else if (Input.GetAxis("Mouse ScrollWheel") < 0f ) // backwards
             {
                 zRotate = zRotate-changedSizeRotate;
-                transform.eulerAngles = new Vector3(xRotate, yRotate, zRotate);
+                transform.localEulerAngles = new Vector3(xRotate, yRotate, zRotate);
             }
         }
         if(rotateY)
@@ -175,15 +178,15 @@ public class movingItem : MonoBehaviour
             if (Input.GetAxis("Mouse ScrollWheel") > 0f ) // forward
             {
                 yRotate = yRotate+changedSizeRotate;
-                transform.eulerAngles = new Vector3(xRotate, yRotate, zRotate);
+                transform.localEulerAngles = new Vector3(xRotate, yRotate, zRotate);
             }
             else if (Input.GetAxis("Mouse ScrollWheel") < 0f ) // backwards
             {
                 yRotate = yRotate-changedSizeRotate;
-                transform.eulerAngles = new Vector3(xRotate, yRotate, zRotate);
+                transform.localEulerAngles = new Vector3(xRotate, yRotate, zRotate);
             }
         }
-        if((Vector3.Distance(transform.position,target.transform.position) <= 1f) && ((Vector3.Distance(transform.localScale,target.transform.localScale)) <= .35f) && (Vector3.Distance(transform.eulerAngles,target.transform.eulerAngles) <= 30f))
+        if((Vector3.Distance(transform.position,target.transform.position) <= 1f) && ((Vector3.Distance(transform.localScale,target.transform.localScale)) <= .45f) && (Vector3.Distance(transform.eulerAngles,target.transform.eulerAngles) <= 30f))
         {
             StartCoroutine(lockedInPlace());
         }
@@ -196,11 +199,11 @@ public class movingItem : MonoBehaviour
             xPosition = ogXPosition;
             yPosition = ogYPosition;
             zPosition = ogZPosition;
-            transform.position = new Vector3(xPosition,yPosition,zPosition);
+            transform.localPosition = new Vector3(0,yPosition,zPosition);
             xRotate = ogXRotate;
             yRotate = ogYRotate;
             zRotate = ogZRotate;
-            transform.eulerAngles = new Vector3(xRotate, yRotate, zRotate);
+            transform.localEulerAngles = new Vector3(xRotate, yRotate, zRotate);
         }
     }
 
@@ -223,10 +226,17 @@ public class movingItem : MonoBehaviour
         rotateY = false;
         moveY = false;
         moveZ = false;
+        target.SetActive(false);
         yield return new WaitForSeconds(1f);
         //success sound & effect
         //add code to replace old sprite with new sprite
+        //add code to delete script from sprite on background control
         diorama.Priority = 0;
-        trigger.SetActive(false);
+        yield return new WaitForSeconds(1f);
+        instructions.SetActive(false);
+        moveUI.SetActive(true);
+        text.SetActive(true);
+        trigger.GetComponent<Collider>().isTrigger = false;
+        Destroy(GetComponent<movingItem>());
     }
 }
