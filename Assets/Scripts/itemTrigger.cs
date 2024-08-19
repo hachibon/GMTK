@@ -71,7 +71,7 @@ public class ItemTrigger : MonoBehaviour
 
         IEnumerator waitForPlayerActivate()
         {
-            yield return new WaitForSeconds(4f);
+            yield return new WaitForSeconds(2f);
             //need to change after receive animation
             text.SetActive(false);
             diorama.Priority = 4;

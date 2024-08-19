@@ -259,7 +259,7 @@ Transform:
   m_GameObject: {fileID: 30768746}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.09, y: 1.981, z: -3.024}
+  m_LocalPosition: {x: 0.1, y: 2.1, z: -3.2}
   m_LocalScale: {x: 0.066619, y: 0.066619, z: 0.04715826}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -978,7 +978,7 @@ Transform:
   m_GameObject: {fileID: 132005235}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 10.090001, y: 1.981, z: -3.0239995}
+  m_LocalPosition: {x: 10.100001, y: 2.1, z: -3.1999998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4925,7 +4925,7 @@ Transform:
   m_GameObject: {fileID: 1172370267}
   serializedVersion: 2
   m_LocalRotation: {x: 0.05424852, y: -0.7050228, z: 0.05424852, w: 0.7050228}
-  m_LocalPosition: {x: 9.972285, y: 3.5108578, z: -3.0239995}
+  m_LocalPosition: {x: 9.9822855, y: 3.6298575, z: -3.1999996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5795,12 +5795,12 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 2
+  m_Priority: 3
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 30768752}
   m_Lens:
-    FieldOfView: 31.8
+    FieldOfView: 61
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -5826,14 +5826,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414231715}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 10.090001, y: 1.981, z: -3.0239995}
+  m_LocalRotation: {x: 0.05424852, y: -0.7050228, z: 0.05424852, w: 0.7050228}
+  m_LocalPosition: {x: 9.9822855, y: 3.6298575, z: -3.1999996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 68362042}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 8.8, y: -90, z: 0}
 --- !u!1 &1418333541
 GameObject:
   m_ObjectHideFlags: 0
@@ -6938,7 +6938,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 3
+  m_Priority: 2
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 30768752}
@@ -6970,7 +6970,7 @@ Transform:
   m_GameObject: {fileID: 1833721133}
   serializedVersion: 2
   m_LocalRotation: {x: 0.05424852, y: -0.7050228, z: 0.05424852, w: 0.7050228}
-  m_LocalPosition: {x: 9.972285, y: 3.5108578, z: -3.0239995}
+  m_LocalPosition: {x: 9.9822855, y: 3.6298575, z: -3.1999996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
