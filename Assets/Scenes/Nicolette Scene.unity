@@ -912,6 +912,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 103633317}
   m_CullTransparentMesh: 1
+--- !u!1 &117627962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 117627964}
+  - component: {fileID: 117627963}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &117627963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117627962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639227339c957754b9433e396a0be9e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numOfPieces: 7
+  amtDone: 0
+--- !u!4 &117627964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117627962}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &132005235
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,6 +1476,7 @@ MonoBehaviour:
   diorama: {fileID: 1888201216}
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
+  gameController: {fileID: 0}
 --- !u!23 &253443979
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1774,6 +1821,7 @@ MonoBehaviour:
   diorama: {fileID: 1888201216}
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
+  gameController: {fileID: 0}
 --- !u!23 &351301454
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4829,6 +4877,7 @@ MonoBehaviour:
   diorama: {fileID: 1888201216}
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
+  gameController: {fileID: 0}
 --- !u!33 &1160494579
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6082,6 +6131,7 @@ MonoBehaviour:
   diorama: {fileID: 1888201216}
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
+  gameController: {fileID: 0}
 --- !u!23 &1564080848
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6404,7 +6454,6 @@ Transform:
   m_LocalScale: {x: 4.5, y: 4.5, z: 4.5}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 1888201217}
   - {fileID: 524955900}
   - {fileID: 1617442781}
   - {fileID: 20738051}
@@ -7119,13 +7168,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1888201215}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.4004329, y: -0.6981652, z: -0.5176606, w: 0.2902524}
-  m_LocalPosition: {x: 5.306801, y: -2.7862546, z: 2.8341856}
-  m_LocalScale: {x: 0.32258064, y: 0.32258064, z: 0.32258064}
+  m_LocalRotation: {x: 0.000000014901161, y: -0.70710677, z: 0.000000029802322, w: 0.7071068}
+  m_LocalPosition: {x: 5.306772, y: 4.7096786, z: -5.2787094}
+  m_LocalScale: {x: 1.4516132, y: 1.451613, z: 1.4516131}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1898807139}
-  m_Father: {fileID: 1719611488}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &1898807138
 GameObject:
@@ -7947,6 +7996,7 @@ MonoBehaviour:
   diorama: {fileID: 1888201216}
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
+  gameController: {fileID: 0}
 --- !u!23 &2079900321
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8052,6 +8102,7 @@ MonoBehaviour:
   diorama: {fileID: 1888201216}
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
+  gameController: {fileID: 0}
 --- !u!23 &2109983518
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8157,6 +8208,7 @@ MonoBehaviour:
   diorama: {fileID: 1888201216}
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
+  gameController: {fileID: 0}
 --- !u!23 &2138915974
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8211,8 +8263,10 @@ SceneRoots:
   - {fileID: 1833721135}
   - {fileID: 1414231717}
   - {fileID: 132005237}
+  - {fileID: 1888201217}
   - {fileID: 377703708}
   - {fileID: 1719611488}
   - {fileID: 946589056}
   - {fileID: 1256672633}
+  - {fileID: 117627964}
   - {fileID: 1434635611}

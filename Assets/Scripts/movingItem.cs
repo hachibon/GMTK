@@ -3,6 +3,7 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class movingItem : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class movingItem : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera diorama;
     [SerializeField] private GameObject text;
     [SerializeField] private GameObject instructions;
+    [SerializeField] private GameObject gameController;
+
     
     
     // Start is called before the first frame update
@@ -231,7 +234,7 @@ public class movingItem : MonoBehaviour
         //success sound & effect
         //add code to replace old sprite with new sprite
         //add code to delete script from sprite on background control
-        diorama.Priority = 0;
+        gameController.GetComponent<NextLevel>().amtDone++;
         yield return new WaitForSeconds(1f);
         instructions.SetActive(false);
         moveUI.SetActive(true);
@@ -240,6 +243,5 @@ public class movingItem : MonoBehaviour
             c.isTrigger = false;
         }
         trigger.GetComponent<Collider>().isTrigger = false;
-        Destroy(GetComponent<movingItem>());
     }
 }
