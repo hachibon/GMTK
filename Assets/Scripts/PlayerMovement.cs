@@ -25,10 +25,13 @@ public class PlayerController : MonoBehaviour
     float movementY;
     float movementZ;
     [SerializeField] float speed = 1;
+    private AudioSource jump, walk;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        jump = GameObject.Find("jump").GetComponent<AudioSource>();
+        //walk = GameObject.Find("footsteps").GetComponent<AudioSource>();
     }
 
     //checks if the player is grounded using Physics.CheckSphere
@@ -52,11 +55,16 @@ public class PlayerController : MonoBehaviour
 
         //player movement
         rb.velocity = new Vector3(0, rb.velocity.y, moveInput * moveSpeed);
+        /*if(moveInput>0)
+        {
+            walk.Play();
+        }*/
 
         //jumping
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = new Vector3(rb.velocity.x, jumpForce, 0);
+            jump.Play();
         }
 
         //wall jump
