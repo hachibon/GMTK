@@ -285,6 +285,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   groundCheckRadius: 0.2
+  speed: 1
 --- !u!65 &30768756
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1510,6 +1511,7 @@ MonoBehaviour:
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
   gameController: {fileID: 117627962}
+  player: {fileID: 0}
 --- !u!23 &253443979
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2034,6 +2036,7 @@ MonoBehaviour:
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
   gameController: {fileID: 117627962}
+  player: {fileID: 0}
 --- !u!23 &351301454
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4393,6 +4396,7 @@ MonoBehaviour:
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
   gameController: {fileID: 117627962}
+  player: {fileID: 0}
 --- !u!23 &925522467
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5458,6 +5462,7 @@ MonoBehaviour:
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
   gameController: {fileID: 117627962}
+  player: {fileID: 0}
 --- !u!33 &1160494579
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6916,6 +6921,7 @@ MonoBehaviour:
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
   gameController: {fileID: 117627962}
+  player: {fileID: 0}
 --- !u!23 &1564080848
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7173,6 +7179,7 @@ MonoBehaviour:
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
   gameController: {fileID: 117627962}
+  player: {fileID: 0}
 --- !u!23 &1590254566
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7619,6 +7626,63 @@ Transform:
   - {fileID: 465450960}
   m_Father: {fileID: 377703708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1793020950
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 337131845277464459, guid: 713c62ff1597fdd479d1ce548f5789a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -21.324375
+      objectReference: {fileID: 0}
+    - target: {fileID: 337131845277464459, guid: 713c62ff1597fdd479d1ce548f5789a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.7752085
+      objectReference: {fileID: 0}
+    - target: {fileID: 337131845277464459, guid: 713c62ff1597fdd479d1ce548f5789a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.7521524
+      objectReference: {fileID: 0}
+    - target: {fileID: 337131845277464459, guid: 713c62ff1597fdd479d1ce548f5789a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 337131845277464459, guid: 713c62ff1597fdd479d1ce548f5789a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 337131845277464459, guid: 713c62ff1597fdd479d1ce548f5789a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 337131845277464459, guid: 713c62ff1597fdd479d1ce548f5789a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 337131845277464459, guid: 713c62ff1597fdd479d1ce548f5789a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 337131845277464459, guid: 713c62ff1597fdd479d1ce548f5789a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 337131845277464459, guid: 713c62ff1597fdd479d1ce548f5789a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5675947760915608231, guid: 713c62ff1597fdd479d1ce548f5789a6, type: 3}
+      propertyPath: m_Name
+      value: SFX Controller
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 713c62ff1597fdd479d1ce548f5789a6, type: 3}
 --- !u!1 &1802476253
 GameObject:
   m_ObjectHideFlags: 0
@@ -9121,6 +9185,7 @@ MonoBehaviour:
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
   gameController: {fileID: 117627962}
+  player: {fileID: 0}
 --- !u!23 &2079900321
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9227,6 +9292,7 @@ MonoBehaviour:
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
   gameController: {fileID: 117627962}
+  player: {fileID: 0}
 --- !u!23 &2084738965
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9333,6 +9399,7 @@ MonoBehaviour:
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
   gameController: {fileID: 117627962}
+  player: {fileID: 0}
 --- !u!23 &2109983518
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9439,6 +9506,7 @@ MonoBehaviour:
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
   gameController: {fileID: 117627962}
+  player: {fileID: 0}
 --- !u!23 &2138915974
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9500,3 +9568,4 @@ SceneRoots:
   - {fileID: 1256672633}
   - {fileID: 117627964}
   - {fileID: 1434635611}
+  - {fileID: 1793020950}

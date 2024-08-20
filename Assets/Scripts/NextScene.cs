@@ -13,12 +13,6 @@ public class NextScene : MonoBehaviour
 		btn.onClick.AddListener(ChangeScenes);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void ChangeScenes()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

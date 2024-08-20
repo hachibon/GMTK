@@ -27,6 +27,7 @@ public class movingItem : MonoBehaviour
     [SerializeField] private GameObject player;
     PlayerController script;
     private Boolean firstTime = true;
+    private AudioSource controllerSound, lockedInSound;
 
     
     
@@ -53,6 +54,8 @@ public class movingItem : MonoBehaviour
         ogZRotate = transform.localEulerAngles.z;
         player = GameObject.Find("Player");
         script = player.GetComponent<PlayerController>();
+        controllerSound = GameObject.Find("controllingItem").GetComponent<AudioSource>();
+        lockedInSound = GameObject.Find("lockedIn").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -115,6 +118,7 @@ public class movingItem : MonoBehaviour
                 yScale = yScale+changedSizeScale;
                 zScale = zScale+changedSizeScale;
                 transform.localScale = new Vector3(xScale,yScale,zScale);
+                controllerSound.Play();
             }
             else if (Input.GetAxis("Mouse ScrollWheel") < 0f ) // backwards
             {
@@ -122,6 +126,7 @@ public class movingItem : MonoBehaviour
                 yScale = yScale-changedSizeScale;
                 zScale = zScale-changedSizeScale;
                 transform.localScale = new Vector3(xScale,yScale,zScale);
+                controllerSound.Play();
             }
         }
         if(scale) //scale keybind
@@ -132,6 +137,7 @@ public class movingItem : MonoBehaviour
                 yScale = yScale+changedSizeScale;
                 zScale = zScale+changedSizeScale;
                 transform.localScale = new Vector3(xScale,yScale,zScale);
+                controllerSound.Play();
             }
             else if (Input.GetAxis("Mouse ScrollWheel") < 0f ) // backwards
             {
@@ -139,6 +145,7 @@ public class movingItem : MonoBehaviour
                 yScale = yScale-changedSizeScale;
                 zScale = zScale-changedSizeScale;
                 transform.localScale = new Vector3(xScale,yScale,zScale);
+                controllerSound.Play();
             }
         }
         if(moveZ)
@@ -147,11 +154,13 @@ public class movingItem : MonoBehaviour
             {
                 zPosition = zPosition+changedSizeMove;
                 transform.localPosition = new Vector3(xPosition,yPosition,zPosition);
+                controllerSound.Play();
             }
             else if (Input.GetAxis("Mouse ScrollWheel") < 0f ) // backwards
             {
                 zPosition = zPosition-changedSizeMove;
                 transform.localPosition = new Vector3(xPosition,yPosition,zPosition);
+                controllerSound.Play();
             }
         }
         if(moveY)
@@ -161,11 +170,13 @@ public class movingItem : MonoBehaviour
             {
                 yPosition = yPosition+changedSizeMove;
                 transform.localPosition = new Vector3(xPosition,yPosition,zPosition);
+                controllerSound.Play();
             }
             else if (Input.GetAxis("Mouse ScrollWheel") < 0f ) // backwards
             {
                 yPosition = yPosition-changedSizeMove;
                 transform.localPosition = new Vector3(xPosition,yPosition,zPosition);
+                controllerSound.Play();
             }
         }
         if(rotateZ)
@@ -174,11 +185,13 @@ public class movingItem : MonoBehaviour
             {
                 zRotate = zRotate+changedSizeRotate;
                 transform.localEulerAngles = new Vector3(xRotate, yRotate, zRotate);
+                controllerSound.Play();
             }
             else if (Input.GetAxis("Mouse ScrollWheel") < 0f ) // backwards
             {
                 zRotate = zRotate-changedSizeRotate;
                 transform.localEulerAngles = new Vector3(xRotate, yRotate, zRotate);
+                controllerSound.Play();
             }
         }
         if(rotateY)
@@ -187,11 +200,13 @@ public class movingItem : MonoBehaviour
             {
                 yRotate = yRotate+changedSizeRotate;
                 transform.localEulerAngles = new Vector3(xRotate, yRotate, zRotate);
+                controllerSound.Play();
             }
             else if (Input.GetAxis("Mouse ScrollWheel") < 0f ) // backwards
             {
                 yRotate = yRotate-changedSizeRotate;
                 transform.localEulerAngles = new Vector3(xRotate, yRotate, zRotate);
+                controllerSound.Play();
             }
         }
         if((Vector3.Distance(transform.position,target.transform.position) <= 1f) && ((Vector3.Distance(transform.localScale,target.transform.localScale)) <= .45f) && (Vector3.Distance(transform.eulerAngles,target.transform.eulerAngles) <= 30f))
@@ -232,6 +247,7 @@ public class movingItem : MonoBehaviour
 
     IEnumerator lockedInPlace()
     {
+        lockedInSound.Play();
         loadedIn = false;
         scale = false;
         rotateZ = false;
