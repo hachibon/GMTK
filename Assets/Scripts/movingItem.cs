@@ -247,6 +247,7 @@ public class movingItem : MonoBehaviour
 
     IEnumerator lockedInPlace()
     {
+        firstTime = false;
         lockedInSound.Play();
         loadedIn = false;
         scale = false;
@@ -271,6 +272,5 @@ public class movingItem : MonoBehaviour
             c.isTrigger = false;
         }
         trigger.GetComponent<Collider>().isTrigger = false;
-        firstTime = false;
     }
 }
