@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,13 +17,13 @@ public class ItemTrigger : MonoBehaviour
         Animator playerAnimator;
         [SerializeField] private CinemachineVirtualCamera diorama;
         [SerializeField] private GameObject text;
+        [SerializeField] private GameObject player;
+        PlayerController script;
         //[SerializeField] private TextMeshProUGUI lineContainer;
         //[SerializeField] private GameObject backgroundItem;
         //[SerializeField] private List<AudioClip> audioClips;
         //[SerializeField] private AudioSource audioSource;
         //[SerializeField] private List<System.String> lines;
-        [SerializeField] private GameObject player;
-
         //[SerializeField] private GameObject xObject;
         //[SerializeField] private Button x;
 
@@ -32,7 +33,11 @@ public class ItemTrigger : MonoBehaviour
         //PlayerMovement script;
         //bool buttonPress = false;
         //public GameObject thisItem;
-
+        void OnEnable()
+        {
+            script = player.GetComponent<PlayerController>();
+            player = GameObject.Find("Player");
+        }
 
         void OnTriggerEnter(Collider other)
         {
@@ -74,11 +79,13 @@ public class ItemTrigger : MonoBehaviour
             yield return new WaitForSeconds(2f);
             //need to change after receive animation
             text.SetActive(false);
+            script.moveSpeed = 0f;
             diorama.Priority = 4;
             yield return new WaitForSeconds(2f);
             instructionUI.SetActive(true);
             backgroundObject.SetActive(true);
             moveUI.SetActive(false);
+            gameObject.SetActive(false);
         }
 
 /*

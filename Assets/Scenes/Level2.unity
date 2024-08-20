@@ -902,6 +902,7 @@ MonoBehaviour:
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
   gameController: {fileID: 117627962}
+  player: {fileID: 0}
 --- !u!23 &79771860
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1617,6 +1618,7 @@ MonoBehaviour:
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
   gameController: {fileID: 117627962}
+  player: {fileID: 0}
 --- !u!23 &253443979
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2224,6 +2226,7 @@ MonoBehaviour:
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
   gameController: {fileID: 117627962}
+  player: {fileID: 0}
 --- !u!23 &351301454
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4943,6 +4946,7 @@ MonoBehaviour:
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
   gameController: {fileID: 117627962}
+  player: {fileID: 0}
 --- !u!23 &925522467
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6302,6 +6306,7 @@ MonoBehaviour:
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
   gameController: {fileID: 117627962}
+  player: {fileID: 0}
 --- !u!33 &1160494579
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7821,6 +7826,7 @@ MonoBehaviour:
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
   gameController: {fileID: 117627962}
+  player: {fileID: 0}
 --- !u!23 &1564080848
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8078,6 +8084,7 @@ MonoBehaviour:
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
   gameController: {fileID: 117627962}
+  player: {fileID: 0}
 --- !u!23 &1590254566
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8400,6 +8407,7 @@ MonoBehaviour:
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
   gameController: {fileID: 117627962}
+  player: {fileID: 0}
 --- !u!23 &1672654624
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8907,6 +8915,7 @@ MonoBehaviour:
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
   gameController: {fileID: 117627962}
+  player: {fileID: 0}
 --- !u!23 &1827218887
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10324,6 +10333,7 @@ MonoBehaviour:
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
   gameController: {fileID: 117627962}
+  player: {fileID: 0}
 --- !u!23 &2079900321
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10430,6 +10440,7 @@ MonoBehaviour:
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
   gameController: {fileID: 117627962}
+  player: {fileID: 0}
 --- !u!23 &2084738965
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10536,6 +10547,7 @@ MonoBehaviour:
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
   gameController: {fileID: 117627962}
+  player: {fileID: 0}
 --- !u!23 &2109983518
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10642,6 +10654,7 @@ MonoBehaviour:
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
   gameController: {fileID: 117627962}
+  player: {fileID: 0}
 --- !u!23 &2138915974
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -24,7 +24,7 @@ public class movingItem : MonoBehaviour
     [SerializeField] private GameObject text;
     [SerializeField] private GameObject instructions;
     [SerializeField] private GameObject gameController;
-    [SerializeField] private GameObject player = GameObject.Find("Player");
+    [SerializeField] private GameObject player;
     PlayerController script;
 
     
@@ -50,6 +50,7 @@ public class movingItem : MonoBehaviour
         ogYRotate = transform.localEulerAngles.y;
         zRotate = transform.localEulerAngles.z;
         ogZRotate = transform.localEulerAngles.z;
+        player = GameObject.Find("Player");
         script = player.GetComponent<PlayerController>();
     }
 
@@ -240,6 +241,7 @@ public class movingItem : MonoBehaviour
         gameController.GetComponent<NextLevel>().amtDone++;
         diorama.Priority = 0;
         script.moveSpeed = 5f;
+        Debug.Log("speed changed back");
         yield return new WaitForSeconds(1f);
         instructions.SetActive(false);
         moveUI.SetActive(true);
