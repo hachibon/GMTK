@@ -501,7 +501,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48962182}
-  m_Mesh: {fileID: 7450741763379908841, guid: 2641c28b54223674982f267b44a34ea3, type: 3}
+  m_Mesh: {fileID: 2783131832183395012, guid: 01d30adf41c64034087d13b60fbf481e, type: 3}
 --- !u!23 &48962185
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1476,7 +1476,7 @@ MonoBehaviour:
   diorama: {fileID: 1888201216}
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
-  gameController: {fileID: 0}
+  gameController: {fileID: 117627962}
 --- !u!23 &253443979
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1821,7 +1821,7 @@ MonoBehaviour:
   diorama: {fileID: 1888201216}
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
-  gameController: {fileID: 0}
+  gameController: {fileID: 117627962}
 --- !u!23 &351301454
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2258,7 +2258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 470141805}
   m_Layer: 0
-  m_Name: Planks
+  m_Name: WoodOutpost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4877,7 +4877,7 @@ MonoBehaviour:
   diorama: {fileID: 1888201216}
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
-  gameController: {fileID: 0}
+  gameController: {fileID: 117627962}
 --- !u!33 &1160494579
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6131,7 +6131,7 @@ MonoBehaviour:
   diorama: {fileID: 1888201216}
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
-  gameController: {fileID: 0}
+  gameController: {fileID: 117627962}
 --- !u!23 &1564080848
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7951,7 +7951,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2079900318
 Transform:
   m_ObjectHideFlags: 0
@@ -7974,7 +7974,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079900317}
-  m_Mesh: {fileID: 7450741763379908841, guid: 2641c28b54223674982f267b44a34ea3, type: 3}
+  m_Mesh: {fileID: 2783131832183395012, guid: 01d30adf41c64034087d13b60fbf481e, type: 3}
 --- !u!114 &2079900320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7996,7 +7996,7 @@ MonoBehaviour:
   diorama: {fileID: 1888201216}
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
-  gameController: {fileID: 0}
+  gameController: {fileID: 117627962}
 --- !u!23 &2079900321
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8102,7 +8102,7 @@ MonoBehaviour:
   diorama: {fileID: 1888201216}
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
-  gameController: {fileID: 0}
+  gameController: {fileID: 117627962}
 --- !u!23 &2109983518
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8208,7 +8208,7 @@ MonoBehaviour:
   diorama: {fileID: 1888201216}
   text: {fileID: 70508216}
   instructions: {fileID: 639190934}
-  gameController: {fileID: 0}
+  gameController: {fileID: 117627962}
 --- !u!23 &2138915974
 MeshRenderer:
   m_ObjectHideFlags: 0
