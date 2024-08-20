@@ -209,7 +209,7 @@ public class movingItem : MonoBehaviour
                 controllerSound.Play();
             }
         }
-        if((Vector3.Distance(transform.position,target.transform.position) <= 1f) && ((Vector3.Distance(transform.localScale,target.transform.localScale)) <= .45f) && (Vector3.Distance(transform.eulerAngles,target.transform.eulerAngles) <= 30f))
+        if((Vector3.Distance(transform.position,target.transform.position) <= 0.8f) && ((Vector3.Distance(transform.localScale,target.transform.localScale)) <= .45f) && (Vector3.Distance(transform.eulerAngles,target.transform.eulerAngles) <= 30f))
         {
             if(firstTime)
             {

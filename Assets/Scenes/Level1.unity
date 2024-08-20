@@ -2390,7 +2390,6 @@ GameObject:
   - component: {fileID: 465450965}
   - component: {fileID: 465450964}
   - component: {fileID: 465450963}
-  - component: {fileID: 465450961}
   - component: {fileID: 465450966}
   m_Layer: 3
   m_Name: Trigger
@@ -2414,27 +2413,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1790357091}
   m_LocalEulerAnglesHint: {x: -77.097, y: 701.283, z: 24.076}
---- !u!65 &465450961
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 465450959}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.5111133, y: 1.1325191, z: 0.24624878}
-  m_Center: {x: 1.7169564, y: 0.52208287, z: 0.62075055}
 --- !u!114 &465450963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8308,7 +8286,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 46.3
+    FieldOfView: 44.8
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -8736,7 +8714,6 @@ GameObject:
   - component: {fileID: 2034019299}
   - component: {fileID: 2034019298}
   - component: {fileID: 2034019297}
-  - component: {fileID: 2034019295}
   - component: {fileID: 2034019300}
   m_Layer: 3
   m_Name: Trigger
@@ -8760,27 +8737,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 690180079}
   m_LocalEulerAnglesHint: {x: -81.429, y: 582.18604, z: 204.886}
---- !u!65 &2034019295
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034019293}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.2688706, y: 1.655209, z: 0.65357554}
-  m_Center: {x: -0.28078806, y: -0.82246035, z: 0.8887114}
 --- !u!114 &2034019297
 MonoBehaviour:
   m_ObjectHideFlags: 0
