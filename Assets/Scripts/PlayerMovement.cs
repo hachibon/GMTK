@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     float movementZ;
     [SerializeField] float speed = 1;
     private AudioSource jump, walk;
+    public Animator animator;
 
     private void Awake()
     {
@@ -55,16 +56,29 @@ public class PlayerController : MonoBehaviour
 
         //player movement
         rb.velocity = new Vector3(0, rb.velocity.y, moveInput * moveSpeed);
-        /*if(moveInput>0)
+        if(moveInput>0)
         {
-            walk.Play();
-        }*/
+            //walk.Play();
+            animator.SetBool("Walk", true);
+        }
+        else
+        {
+            animator.SetBool("Walk", false);
+        }
 
         //jumping
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = new Vector3(rb.velocity.x, jumpForce, 0);
             jump.Play();
+        }
+
+        if(!isGrounded)
+        {
+            animator.SetBool("Jump", true);
+        }
+        else{
+            animator.SetBool("Jump", false);
         }
 
         //wall jump
