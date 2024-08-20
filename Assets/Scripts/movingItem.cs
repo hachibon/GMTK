@@ -24,6 +24,8 @@ public class movingItem : MonoBehaviour
     [SerializeField] private GameObject text;
     [SerializeField] private GameObject instructions;
     [SerializeField] private GameObject gameController;
+    [SerializeField] private GameObject player = GameObject.Find("Player");
+    PlayerController script;
 
     
     
@@ -48,6 +50,7 @@ public class movingItem : MonoBehaviour
         ogYRotate = transform.localEulerAngles.y;
         zRotate = transform.localEulerAngles.z;
         ogZRotate = transform.localEulerAngles.z;
+        script = player.GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -235,6 +238,8 @@ public class movingItem : MonoBehaviour
         //add code to replace old sprite with new sprite
         //add code to delete script from sprite on background control
         gameController.GetComponent<NextLevel>().amtDone++;
+        diorama.Priority = 0;
+        script.moveSpeed = 5f;
         yield return new WaitForSeconds(1f);
         instructions.SetActive(false);
         moveUI.SetActive(true);

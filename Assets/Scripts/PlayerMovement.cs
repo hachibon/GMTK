@@ -1,4 +1,6 @@
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -20,6 +22,9 @@ public class PlayerController : MonoBehaviour
     private bool facingRight = true;
     private bool isTouchingWall;
     private bool canWallJump;
+    float movementY;
+    float movementZ;
+    [SerializeField] float speed = 1;
 
     private void Awake()
     {
@@ -30,6 +35,13 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundLayer);
+        /*Vector3 movement = new Vector3(0.0f, 0.0f, movementZ);
+        rb.AddForce(movement * speed);
+
+        if(rb.velocity.magnitude>7)
+        {
+            rb.velocity = rb.velocity.normalized * 7;
+        }*/
     }
 
     //handles player movement using Input.GetAxis("Horizontal") and applies velocity to the Rigidbody
@@ -39,7 +51,7 @@ public class PlayerController : MonoBehaviour
         Flip(moveInput);
 
         //player movement
-        rb.velocity = new Vector3(moveInput * moveSpeed, rb.velocity.y, 0);
+        rb.velocity = new Vector3(0, rb.velocity.y, moveInput * moveSpeed);
 
         //jumping
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
@@ -56,6 +68,12 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector3(-transform.localScale.x * wallJumpForce, jumpForce, 0);
         }
     }
+
+    /*void OnMove(InputValue value)
+    {
+        Vector2 v = value.Get<Vector2>();
+        movementZ = v.x;
+    }*/
 
     //method flips the player sprite horizontally based on movement direction (moveInput)
     private void Flip(float moveInput)
