@@ -76,7 +76,6 @@ public class ItemTrigger : MonoBehaviour
 
         IEnumerator waitForPlayerActivate()
         {
-            yield return new WaitForSeconds(2f);
             //need to change after receive animation
             text.SetActive(false);
             script.moveSpeed = 0f;

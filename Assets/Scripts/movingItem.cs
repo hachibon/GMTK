@@ -26,6 +26,7 @@ public class movingItem : MonoBehaviour
     [SerializeField] private GameObject gameController;
     [SerializeField] private GameObject player;
     PlayerController script;
+    private Boolean firstTime = true;
 
     
     
@@ -57,7 +58,7 @@ public class movingItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.R))
+        if(firstTime && Input.GetKeyDown(KeyCode.R))
         {
             loadedIn = false;
             rotateZ = false;
@@ -66,7 +67,7 @@ public class movingItem : MonoBehaviour
             moveY = false;
             scale = true;
         }
-        if(Input.GetKeyDown(KeyCode.E)&&pressedOnce==false)
+        if(firstTime && Input.GetKeyDown(KeyCode.E)&&pressedOnce==false)
         {
             loadedIn = false;
             scale = false;
@@ -76,7 +77,7 @@ public class movingItem : MonoBehaviour
             rotateY = false;
             StartCoroutine(waitASecPressedOnceTrue());
         }
-        if(Input.GetKeyDown(KeyCode.E)&&pressedOnce==true)
+        if(firstTime && Input.GetKeyDown(KeyCode.E)&&pressedOnce==true)
         {
             loadedIn = false;
             scale = false;
@@ -86,7 +87,7 @@ public class movingItem : MonoBehaviour
             rotateY = true;
             StartCoroutine(waitASecPressedOnceFalse());
         }
-        if(Input.GetKeyDown(KeyCode.W)&&pressedOnce==false)
+        if(firstTime && Input.GetKeyDown(KeyCode.W)&&pressedOnce==false)
         {
             loadedIn = false;
             scale = false;
@@ -96,7 +97,7 @@ public class movingItem : MonoBehaviour
             moveZ = true;
             StartCoroutine(waitASecPressedOnceTrue());
         }
-        if(Input.GetKeyDown(KeyCode.W)&&pressedOnce==true)
+        if(firstTime && Input.GetKeyDown(KeyCode.W)&&pressedOnce==true)
         {
             loadedIn = false;
             scale = false;
@@ -106,7 +107,7 @@ public class movingItem : MonoBehaviour
             moveY = true;
             StartCoroutine(waitASecPressedOnceFalse());
         }
-        if(loadedIn == true)
+        if(firstTime && loadedIn == true)
         {
             if (Input.GetAxis("Mouse ScrollWheel") > 0f ) // forward
             {
@@ -195,9 +196,13 @@ public class movingItem : MonoBehaviour
         }
         if((Vector3.Distance(transform.position,target.transform.position) <= 1f) && ((Vector3.Distance(transform.localScale,target.transform.localScale)) <= .45f) && (Vector3.Distance(transform.eulerAngles,target.transform.eulerAngles) <= 30f))
         {
-            StartCoroutine(lockedInPlace());
+            if(firstTime)
+            {
+                StartCoroutine(lockedInPlace());
+            }
+
         }
-        if(Input.GetKeyDown(KeyCode.Q)) //reset position
+        if(firstTime && Input.GetKeyDown(KeyCode.Q)) //reset position
         {
             xScale = ogXScale;
             yScale = ogYScale;
@@ -250,5 +255,6 @@ public class movingItem : MonoBehaviour
             c.isTrigger = false;
         }
         trigger.GetComponent<Collider>().isTrigger = false;
+        firstTime = false;
     }
 }
