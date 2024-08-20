@@ -268,9 +268,9 @@ public class movingItem : MonoBehaviour
         instructions.SetActive(false);
         moveUI.SetActive(true);
         text.SetActive(true);
-        foreach(Collider c in trigger.GetComponents<Collider> ()) {
+        /*foreach(Collider c in trigger.GetComponents<Collider> ()) {
             c.isTrigger = false;
-        }
-        trigger.GetComponent<Collider>().isTrigger = false;
+        }*/
+        //trigger.GetComponent<Collider>().isTrigger = false;
     }
 }
